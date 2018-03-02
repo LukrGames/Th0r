@@ -1,7 +1,7 @@
 //
 //  topangadetect.c
 //  electra
-//
+//  Th0r
 //  Created by CoolStar on 2/12/18.
 //  Copyright © 2018 Electra Team. All rights reserved.
 //
@@ -12,8 +12,8 @@
 
 //THIS DETECTION IS NOT COMPREHENSIVE
 //DO NOT TRY MANUALLY REMOVING FILES TO PASS THIS CHECK
-//IF NOT ALL OF TOPANGA'S FILES ARE REMOVED, ELECTRA WILL FAIL TO EXTRACT THE BOOTSTRAP
-//YOU HAVE BEEN WARNED
+//IF NOT ALL OF TOPANGA'S FILES ARE REMOVED, ELECTRA/Th0r WILL not fail bue to me remving all files needed if you've never used this jailbreak tool before. IT WILL FORCE EXTRACT A NEW BOOTSTRAP
+//YOU HAVE BEEN WARNED potentialy dangerous but hopefully fixes any problems
 
 bool topangaInstalled(){
     NSMutableArray *bootstrap_files_list = [[NSMutableArray alloc] initWithObjects:

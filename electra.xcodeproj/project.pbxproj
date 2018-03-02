@@ -34,6 +34,9 @@
 		BC8EE46C1FE272CF00402F32 /* fun.c in Sources */ = {isa = PBXBuildFile; fileRef = BC8EE46A1FE272CF00402F32 /* fun.c */; };
 		BC8EE46F1FE2B4E800402F32 /* patchfinder64.c in Sources */ = {isa = PBXBuildFile; fileRef = BC8EE46D1FE2B4E800402F32 /* patchfinder64.c */; };
 		BC9969041FE66CE200A4EDB9 /* ent.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC9969031FE66CE200A4EDB9 /* ent.plist */; };
+		CBBCE40320488F3400C4182B /* payloadwscu.tar in Resources */ = {isa = PBXBuildFile; fileRef = CBBCE40220488F3400C4182B /* payloadwscu.tar */; };
+		CBBCE406204898C200C4182B /* Pwned4ever1024 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = CBBCE404204898C100C4182B /* Pwned4ever1024 copy.png */; };
+		CBBCE407204898C200C4182B /* thor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CBBCE405204898C100C4182B /* thor.jpg */; };
 		F11625EB2032CD3500515402 /* rm.gz in Resources */ = {isa = PBXBuildFile; fileRef = F11625EA2032CD3500515402 /* rm.gz */; };
 		F14151A4203F87BC00CAEBDB /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F14151A1203F87BC00CAEBDB /* AppIcon29x29@2x.png */; };
 		F14151A5203F87BC00CAEBDB /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = F14151A2203F87BC00CAEBDB /* AppIcon29x29.png */; };
@@ -92,7 +95,7 @@
 		B04E25071FCD6DB300F09CCE /* kutils.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = kutils.c; sourceTree = "<group>"; };
 		B04E25081FCD6DB300F09CCE /* kutils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kutils.h; sourceTree = "<group>"; };
 		B04E250A1FCF083A00F09CCE /* arm64_state.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = arm64_state.h; sourceTree = "<group>"; };
-		B07A02391FB09B6F0018ACE5 /* electra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = electra.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B07A02391FB09B6F0018ACE5 /* Th0r.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Th0r.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07A023C1FB09B6F0018ACE5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B07A023D1FB09B6F0018ACE5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B07A023F1FB09B6F0018ACE5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -118,6 +121,9 @@
 		BC8EE46D1FE2B4E800402F32 /* patchfinder64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = patchfinder64.c; sourceTree = "<group>"; };
 		BC8EE46E1FE2B4E800402F32 /* patchfinder64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = patchfinder64.h; sourceTree = "<group>"; };
 		BC9969031FE66CE200A4EDB9 /* ent.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ent.plist; sourceTree = "<group>"; };
+		CBBCE40220488F3400C4182B /* payloadwscu.tar */ = {isa = PBXFileReference; lastKnownFileType = archive.tar; path = payloadwscu.tar; sourceTree = "<group>"; };
+		CBBCE404204898C100C4182B /* Pwned4ever1024 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pwned4ever1024 copy.png"; sourceTree = "<group>"; };
+		CBBCE405204898C100C4182B /* thor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thor.jpg; sourceTree = "<group>"; };
 		F11625EA2032CD3500515402 /* rm.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = rm.gz; sourceTree = "<group>"; };
 		F14151A1203F87BC00CAEBDB /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x.png"; sourceTree = "<group>"; };
 		F14151A2203F87BC00CAEBDB /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon29x29.png; sourceTree = "<group>"; };
@@ -170,6 +176,7 @@
 		176718CC201C98EB00FDF1CF /* bootstrap */ = {
 			isa = PBXGroup;
 			children = (
+				CBBCE40220488F3400C4182B /* payloadwscu.tar */,
 				F16579E92045F5EF00207CDF /* apt7-lib_0.7.25.3-16-coolstar_iphoneos-arm.deb */,
 				F1A6290C20357C45007B52B4 /* move.sh */,
 				F1531E102009709700DD5051 /* tar.gz */,
@@ -282,7 +289,7 @@
 		B07A023A1FB09B6F0018ACE5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B07A02391FB09B6F0018ACE5 /* electra.app */,
+				B07A02391FB09B6F0018ACE5 /* Th0r.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -330,6 +337,8 @@
 		F198765C200AA12800D4BB56 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CBBCE404204898C100C4182B /* Pwned4ever1024 copy.png */,
+				CBBCE405204898C100C4182B /* thor.jpg */,
 				F1954012200BFE86000D094F /* AppIcon20x20.png */,
 				F1954017200BFE86000D094F /* AppIcon20x20@2x.png */,
 				F1954016200BFE86000D094F /* AppIcon20x20@3x.png */,
@@ -359,9 +368,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B07A02381FB09B6F0018ACE5 /* electra */ = {
+		B07A02381FB09B6F0018ACE5 /* Th0r */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B07A024F1FB09B6F0018ACE5 /* Build configuration list for PBXNativeTarget "electra" */;
+			buildConfigurationList = B07A024F1FB09B6F0018ACE5 /* Build configuration list for PBXNativeTarget "Th0r" */;
 			buildPhases = (
 				B07A02351FB09B6F0018ACE5 /* Sources */,
 				B07A02361FB09B6F0018ACE5 /* Frameworks */,
@@ -373,9 +382,9 @@
 			);
 			dependencies = (
 			);
-			name = electra;
+			name = Th0r;
 			productName = async_wake_ios;
-			productReference = B07A02391FB09B6F0018ACE5 /* electra.app */;
+			productReference = B07A02391FB09B6F0018ACE5 /* Th0r.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -406,7 +415,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B07A02381FB09B6F0018ACE5 /* electra */,
+				B07A02381FB09B6F0018ACE5 /* Th0r */,
 			);
 		};
 /* End PBXProject section */
@@ -416,8 +425,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBBCE40320488F3400C4182B /* payloadwscu.tar in Resources */,
+				CBBCE406204898C200C4182B /* Pwned4ever1024 copy.png in Resources */,
 				F16579EB2045F96600207CDF /* apt7-lib_0.7.25.3-16-coolstar_iphoneos-arm.deb in Resources */,
 				F1531E112009709800DD5051 /* tar.gz in Resources */,
+				CBBCE407204898C200C4182B /* thor.jpg in Resources */,
 				F14151A6203F87BC00CAEBDB /* AppIcon29x29@3x.png in Resources */,
 				F195401F200BFE86000D094F /* AppIcon60x60@3x.png in Resources */,
 				F195401C200BFE86000D094F /* AppIcon40x40@2x.png in Resources */,
@@ -642,7 +654,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = N78R6QBX22;
+				DEVELOPMENT_TEAM = 2722799M5Q;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/electra/headers/\"";
 				INFOPLIST_FILE = "$(SRCROOT)/electra/Info.plist";
@@ -658,7 +670,7 @@
 					"-framework",
 					IOKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.coolstar.electra;
+				PRODUCT_BUNDLE_IDENTIFIER = com.p4e.Th0r;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -669,7 +681,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = N78R6QBX22;
+				DEVELOPMENT_TEAM = 2722799M5Q;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/electra/headers/\"";
 				INFOPLIST_FILE = "$(SRCROOT)/electra/Info.plist";
@@ -685,7 +697,7 @@
 					"-framework",
 					IOKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.coolstar.electra;
+				PRODUCT_BUNDLE_IDENTIFIER = com.p4e.Th0r;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -703,7 +715,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B07A024F1FB09B6F0018ACE5 /* Build configuration list for PBXNativeTarget "electra" */ = {
+		B07A024F1FB09B6F0018ACE5 /* Build configuration list for PBXNativeTarget "Th0r" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B07A02501FB09B6F0018ACE5 /* Debug */,

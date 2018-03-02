@@ -249,15 +249,15 @@ do { \
     
     copy_basebinaries();
     
-#define BinaryLocation "/electra/inject_criticald"
+#define BinaryLocation "/Th0r/inject_criticald"
     
-    const char* args_amfid[] = {BinaryLocation, itoa(amfid_pid), "/electra/amfid_payload.dylib", NULL};
+    const char* args_amfid[] = {BinaryLocation, itoa(amfid_pid), "/Th0r/amfid_payload.dylib", NULL};
     rv = posix_spawn(&pd, BinaryLocation, NULL, NULL, (char **)&args_amfid, NULL);
     waitpid(pd, NULL, 0);
     
     unlink("/.amfid_success");
     const char *args_helloworld[] = {"helloworld", NULL};
-    rv = posix_spawn(&pd, "/electra/helloworld", NULL, NULL, (char **)&args_helloworld, NULL);
+    rv = posix_spawn(&pd, "/Th0r/helloworld", NULL, NULL, (char **)&args_helloworld, NULL);
     waitpid(pd, NULL, 0);
     
     if (!file_exists("/.amfid_success")){
@@ -266,18 +266,13 @@ do { \
     }
     unlink("/.amfid_success");
     
-    int bootstrapped = open("/.bootstrapped_electra", O_RDONLY);
+    int bootstrapped = open("/.bootstrapped_Th0r", O_RDONLY);
     if (bootstrapped == -1) {
         if (checkLiberiOS()){
             removingLiberiOS();
             removeLiberiOS();
         }
-        if (topangaInstalled()){
-            close(bootstrapped);
-            wk64(IOSurfaceRootUserClient_port + koffset(KSTRUCT_OFFSET_IPC_PORT_IP_KOBJECT), IOSurfaceRootUserClient_addr);
-            unlink("/electra/rm");
-            return -2;
-        }
+
         removingElectraBeta();
         removeElectraBeta();
         
@@ -290,8 +285,8 @@ do { \
         if (snapshot == 1){
             printf("Snapshot exists!\n");
         } else if (snapshot == 0){
-            rename("/electra/createSnapshot", "/createSnapshot");
-            rv = posix_spawn(&pd, "/electra/rm", NULL, NULL, (char **)&(const char*[]){ "rm", "-rf", "/electra", NULL }, NULL);
+            rename("/Th0r/createSnapshot", "/createSnapshot");
+            rv = posix_spawn(&pd, "/Th0r/rm", NULL, NULL, (char **)&(const char*[]){ "rm", "-rf", "/Th0r", NULL }, NULL);
             waitpid(pd, NULL, 0);
             
             rv = posix_spawn(&pd, "/createSnapshot", NULL, NULL, (char **)&(const char*[]){ "createSnapshot", NULL }, NULL);
@@ -333,8 +328,8 @@ do { \
     close(bootstrapped);
     
     extract_bootstrap();
-    unlink("/electra/createSnapshot");
-    unlink("/electra/rm");
+    unlink("/Th0r/createSnapshot");
+    unlink("/Th0r/rm");
 
     // MARK: - Cleanup
     
@@ -353,7 +348,7 @@ do { \
     kill(cfprefsd_pid, SIGKILL);
     
     if (enable_tweaks) {
-        const char* args_launchd[] = {BinaryLocation, itoa(1), "/electra/pspawn_payload.dylib", NULL};
+        const char* args_launchd[] = {BinaryLocation, itoa(1), "/Th0r/pspawn_payload.dylib", NULL};
         rv = posix_spawn(&pd, BinaryLocation, NULL, NULL, (char **)&args_launchd, NULL);
         waitpid(pd, NULL, 0);
     }

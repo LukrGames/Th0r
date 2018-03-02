@@ -20,7 +20,7 @@ static ViewController *currentViewController;
     return currentViewController;
 }
 
-- (void)checkVersion {
+/*- (void)checkVersion {
     NSString *rawgitHistory = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"githistory" ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil];
     __block NSArray *gitHistory = [rawgitHistory componentsSeparatedByString:@"\n"];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul), ^{
@@ -38,12 +38,12 @@ static ViewController *currentViewController;
             });
         }
     });
-}
+}*/
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self checkVersion];
+    //[self checkVersion];
     
     NSNotificationCenter* notificationCenter = [NSNotificationCenter defaultCenter];
     
@@ -75,7 +75,7 @@ static ViewController *currentViewController;
 }
 
 - (IBAction)credits:(id)sender {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Credits" message:@"Electra is brought to you by CoolStar, Ian Beer, theninjaprawn, stek29, Siguza and xerub.\n\nElectra includes the following software:\namfid patch by theninjaprawn\njailbreakd & tweak injection by CoolStar\nunlocknvram & sandbox fixes by stek29\nlibsubstitute by comex\nContains code from simject by angelXwind\nAnemone by CoolStar, kirb, isklikas and goeo\nPreferenceLoader by DHowett & rpetrich" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Credits" message:@"Th0r is brought to you by Pwned4ever's Adapted project and modified code from the Electra Team on Github. All credits goes to The Electra Team for making this possible and to the founder of the vulnerability, so the team could create this jailbreak tool. CoolStar, Ian Beer, theninjaprawn, stek29, Siguza and xerub.\n\nTh0r includes the following software:\namfid patch by theninjaprawn\njailbreakd & tweak injection by CoolStar\nunlocknvram & sandbox fixes by stek29\nlibsubstitute by comex\nContains code from simject by angelXwind\nAnemone by CoolStar, kirb, isklikas and goeo\nPreferenceLoader by DHowett & rpetrich.\nFinal modifcation of code by Pwned4ever" preferredStyle:UIAlertControllerStyleAlert];
     [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
     [self presentViewController:alertController animated:YES completion:nil];
 }
@@ -161,7 +161,7 @@ static ViewController *currentViewController;
 
 - (void)cydiaDone {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [jailbreak setTitle:@"Please Wait (2/3)" forState:UIControlStateNormal];
+        [jailbreak setTitle:@"Respringing..." forState:UIControlStateNormal];
     });
 }
 
@@ -180,7 +180,7 @@ static ViewController *currentViewController;
 - (void)displaySnapshotWarning {
     dispatch_async(dispatch_get_main_queue(), ^{
         [jailbreak setTitle:@"user prompt" forState:UIControlStateNormal];
-        UIAlertController *apfsWarningController = [UIAlertController alertControllerWithTitle:@"APFS Snapshot Not Found" message:@"Warning: Your device was bootstrapped using a pre-release version of Electra and thus does not have an APFS Snapshot present. While Electra may work fine, you will not be able to use SemiRestore to restore to stock if you need to. Please clean your device and re-bootstrap with this version of Electra to create a snapshot." preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *apfsWarningController = [UIAlertController alertControllerWithTitle:@"APFS Snapshot Not Found" message:@"Warning: Your device was bootstrapped using a pre-release version of Electra and thus does not have an APFS Snapshot present. While Electra/Th0r may work fine, you will not be able to use SemiRestore to restore to stock if you need to. Please clean your device and re-bootstrap with this version of Electra/Th0r to create a snapshot." preferredStyle:UIAlertControllerStyleAlert];
         [apfsWarningController addAction:[UIAlertAction actionWithTitle:@"Continue Jailbreak" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             [jailbreak setTitle:@"Please Wait (2/3)" forState:UIControlStateNormal];
             snapshotWarningRead();

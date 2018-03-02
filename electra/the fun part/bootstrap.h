@@ -1,7 +1,7 @@
 //
 //  bootstrap.h
 //  electra
-//
+//  Th0r
 //  Created by Jamie Bishop on 11/02/2018.
 //  Copyright © 2018 Electra Team. All rights reserved.
 //

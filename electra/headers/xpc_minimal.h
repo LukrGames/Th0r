@@ -1,7 +1,7 @@
 //
 //  xpc_minimal.h
 //  electra
-//
+//  Th0r
 //  Created by karin on 29/1/2018.
 //  Copyright © 2018 Electra Team. All rights reserved.
 //
