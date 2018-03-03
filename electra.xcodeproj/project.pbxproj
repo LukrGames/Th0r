@@ -666,7 +666,7 @@
 					"-framework",
 					IOKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.p4e.Th0r;
+				PRODUCT_BUNDLE_IDENTIFIER = com.p4e.Th0r2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -693,7 +693,7 @@
 					"-framework",
 					IOKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.p4e.Th0r;
+				PRODUCT_BUNDLE_IDENTIFIER = com.p4e.Th0r2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
