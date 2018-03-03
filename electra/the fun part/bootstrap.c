@@ -68,21 +68,9 @@ void extract_bootstrap() {
     chmod("/bin/launchctl", 0755);
     unlink("/Th0r/launchctl");
     
-    int bootstrapped = open("/.bootstrapped_electra", O_RDONLY);
-    //if (bootstrapped != -1 && !file_exists("/Applications/Cydia.app/Cydia")) {
+    int bootstrapped = open("/.bootstrapped_Th0r", O_RDONLY);
     if (bootstrapped != -1 ) {
-        chmod("/Library/LaunchDaemons/com.saurik.Cydia.Startup.plist", 0755);
-        chown("/Library/LaunchDaemons/com.saurik.Cydia.Startup.plist", 0, 80);
-        chmod("/Library/LaunchDaemons/com.openssh.sshd.plist", 0755);
-        chown("/Library/LaunchDaemons/com.openssh.sshd.plist", 0, 80);
-        chown("/usr/libexec/cydia/cydo", 0, 80);
-        chmod("/usr/libexec/cydia/cydo", 06777);
-        chown("/usr/lib/TweakInject/*", 0, 80);
-        chmod("/usr/lib/TweakInject/*", 0755);
-        chown("/usr/lib/TweakInject*", 0, 80);
-        chmod("/usr/lib/TweakInject*", 0755);
-        chown("/usr/lib/TweakInject/PreferenceLoader.plist", 0, 80);
-        chmod("/usr/lib/TweakInject/PreferenceLoader.plist", 0755);
+
         close(bootstrapped);
         return post_bootstrap(false);
     }
@@ -623,176 +611,19 @@ void extract_bootstrap() {
     
     
 
-    //if (!file_exists("/Applications/Cydia.app/Cydia")){
-        //posix_spawn(&pd, tar, NULL, NULL, (char **)&(const char*[]){ tar, "--preserve-permissions", "-xvf", progname("/payloadwscu.tar"), "-C", "/", NULL }, NULL);
-        //waitpid(pd, NULL, 0);
-        
-         extractGz("bootstrap.tar", "/Th0r/bootstrap.tar");
-         
+    if (!file_exists("/Applications/Cydia.app/Cydia")){
+        extractGz("bootstrap.tar", "/Th0r/bootstrap.tar");
          posix_spawn(&pd, tar, NULL, NULL, (char **)&(const char*[]){ tar, "--preserve-permissions", "-xvf", "/Th0r/bootstrap.tar", "-C", "/", NULL }, NULL);
          waitpid(pd, NULL, 0);
          
          unlink("/Th0r/bootstrap.tar");
         
-        //unlink("/payloadwscu.tar");
-    
-        chmod("/Library/LaunchDaemons/com.saurik.Cydia.Startup.plist", 0755);
-        chown("/Library/LaunchDaemons/com.saurik.Cydia.Startup.plist", 0, 80);
-        chmod("/Library/LaunchDaemons/com.openssh.sshd.plist", 0755);
-        chown("/Library/LaunchDaemons/com.openssh.sshd.plist", 0, 80);
-        chmod("/Library/LaunchDaemons/jailbreakd.plist", 0755);
-        chown("/Library/LaunchDaemons/jailbreakd.plist", 0, 0);
-        chmod("/Library/LaunchDaemons/", 0755);
-        chown("/Library/LaunchDaemons/", 0, 80);
-        chmod("/Library/dpkg/info/cydia.postinst", 0755);
-        chown("/Library/dpkg/info/cydia.postinst", 0, 80);
-        chmod("/Library/dpkg/info/cydia.preinst", 0755);
-        chown("/Library/dpkg/info/cydia.preinst", 0, 80);
-        chown("/Library/dpkg/info/uikittools.extrainst_", 0, 80);
-        chmod("/Library/dpkg/info/uikittools.extrainst_", 0755);
-        
-        chown("/Library/dpkg/info/openssh.postinst", 0, 80);
-        chmod("/Library/dpkg/info/openssh.postinst", 0755);
-        chown("/Library/dpkg/info/cy+cpu.arm64*", 0, 80);
-        chmod("/Library/dpkg/info/cy+cpu.arm64*", 0755);
-        chown("/private/etc/apt*/*/*", 0, 0);
-        chmod("/private/etc/apt*/*/*", 0755);
-        chown("/private/etc/apt/*", 0, 0);
-        chmod("/private/etc/apt/*", 0755);
-        chown("/private/etc/apt*", 0, 0);
-        chmod("/private/etc/apt*", 0755);
-        chown("/private/etc/dpkg*", 0, 0);
-        chmod("/private/etc/dpkg*", 0755);
-        chown("/private/etc/dpkg/*", 0, 0);
-        chmod("/private/etc/dpkg/*", 0755);
-        chown("/private/etc/dpkg/*/*", 0, 0);
-        chmod("/private/etc/dpkg/*/*", 0755);
-        chown("/usr/lib/TweakInject/*", 0, 80);
-        chmod("/usr/lib/TweakInject/*", 0755);
-        chown("/usr/lib/TweakInject/PreferenceLoader.plist", 0, 80);
-        chmod("/usr/lib/TweakInject/PreferenceLoader.plist", 0755);
-        
-        chown("/private/var/lib*", 0, 0);
-        chmod("/private/var/lib*", 0755);
-        chown("/private/var/lib/*/*/*/*", 0, 0);
-        chmod("/private/var/lib/*/*/*/*", 0755);
-        chown("/private/var/lib/*/*/*", 0, 0);
-        chmod("/private/var/lib/*/*/*", 0755);
-        chown("/private/var/lib/*/*", 0, 0);
-        chmod("/private/var/lib/*/*", 0755);
-        chown("/private/var/lib/*/*", 0, 0);
-        chmod("/private/var/lib/*", 0755);
-        chown("/private/var/lib/apt*", 0, 0);
-        chmod("/private/var/lib/apt*", 0755);
-        chown("/private/var/lib/apt/*", 0, 0);
-        chmod("/private/var/lib/apt/*", 0755);
-        chown("/private/var/lib/apt/*/*", 0, 0);
-        chmod("/private/var/lib/apt/*/*", 0755);
-        chown("/private/var/lib/dpkg", 0, 0);
-        chmod("/private/var/lib/dpkg", 0755);
-        chown("/private/var/lib/dpkg/*", 0, 0);
-        chmod("/private/var/lib/dpkg/*", 0755);
-        chown("/private/var/lib/dpkg/*/*", 0, 0);
-        chmod("/private/var/lib/dpkg/*/*", 0755);
-        chown("/private/var/lib/dpkg/info/com.saurik*", 0, 0);
-        chmod("/private/var/lib/dpkg/info/com.saurik*", 0755);
-        chown("/private/var/lib/dpkg/info/cy*", 0, 0);
-        chmod("/private/var/lib/dpkg/info/cy*", 0755);
-        chown("/private/var/lib/dpkg/*/*/*", 0, 0);
-        chmod("/private/var/lib/dpkg/*/*/*", 0755);
-        chown("/private/var/lib/dpkg/info/*", 0, 0);
-        chmod("/private/var/lib/dpkg/info/*", 0755);
-        chown("/private/var/lib/dpkg/info*", 0, 0);
-        chmod("/Library/dpkg/info*", 0755);
-        chown("/Applications/Cydia.app", 0, 80);
-        chmod("/Applications/Cydia.app", 0775);
-        chown("/Applications/Cydia.app/Cydia", 0, 0);
-        chmod("/Applications/Cydia.app/Cydia", 0755);
-        
-
-        chown("/usr/libexec/cydia*", 0, 80);
-        chmod("/usr/libexec/cydia*", 0777);
-        chown("/usr/libexec/apt*", 0, 80);
-        chmod("/usr/libexec/apt*", 0755);
-        chown("/usr/libexec/dpkg*", 0, 80);
-        chmod("/usr/libexec/dpkg*", 0777);
-        
-        chown("/usr/include/cydia*", 0, 80);
-        chmod("/usr/include/cydia*", 0777);
-        chown("/usr/lib/cydia*", 0, 80);
-        chmod("/usr/lib/cydia*", 0777);
-        chown("/usr/bin*", 0, 80);
-        chmod("/usr/bin*", 0755);
-        chown("/usr/bin/*", 0, 80);
-        chmod("/usr/bin/*", 755);
-        chown("/usr/*", 0, 80);
-        chmod("/usr/bin*", 755);
-        chown("/usr/lib/apt*", 0, 80);
-        chmod("/usr/lib/apt*", 755);
-        chown("/usr/lib/apt/*", 0, 80);
-        chmod("/usr/lib/apt/*", 755);
-        chown("/usr/lib/apt/*/*", 0, 80);
-        chmod("/usr/lib/apt/*/*", 755);
-        chown("/usr/lib/dpkg*", 0, 80);
-        chmod("/usr/lib/dpkg*", 755);
-        chown("/usr/lib/dpkg/*", 0, 80);
-        chmod("/usr/lib/dpkg/*", 755);
-        chown("/usr/lib/dpkg/*/*", 0, 80);
-        chmod("/usr/lib/dpkg/*/*", 755);
-        chown("/usr/lib/dpkg/*/*/*", 0, 80);
-        chmod("/usr/lib/dpkg/*/*/*", 755);
-        chown("/usr/libexec/cydia*", 0, 80);
-        chmod("/usr/libexec/cydia*", 755);
-        chown("/usr/libexec/gpg*", 0, 80);
-        chmod("/usr/libexec/gpg*", 755);
-        chown("/usr/libexec/gnupg*", 0, 80);
-        chmod("/usr/libexec/gnupg*", 755);
-        chown("/usr/libexec/gnupg/*", 0, 80);
-        chmod("/usr/libexec/gnupg/*", 755);
-        chown("/usr/libexec/cydia/*", 0, 80);
-        chmod("/usr/libexec/cydia/*", 755);
-        chown("/usr/libexec/apt*", 0, 80);
-        chmod("/usr/libexec/apt*", 755);
-        chown("/usr/libexec/apt/*", 0, 80);
-        chmod("/usr/libexec/apt/*", 755);
-        chown("/usr/libexec/apt/*/*", 0, 80);
-        chmod("/usr/libexec/apt/*/*", 755);
-        chown("/usr/libexec/gpg*", 0, 80);
-        chmod("/usr/libexec/gpg*", 755);
-        chown("/usr/libexec/gnupg*", 0, 80);
-        chmod("/usr/libexec/gnupg*", 755);
-        chown("/usr/libexec/gnupg/*", 0, 80);
-        chmod("/usr/libexec/gnupg/*", 755);
-        chown("/usr/libexec/dpkg*", 0, 80);
-        chmod("/usr/libexec/dpkg*", 755);
-        chown("/usr/libexec/dpkg/*", 0, 80);
-        chmod("/usr/libexec/dpkg/*", 755);
-        chown("/usr/libexec/dpkg/*/*", 0, 80);
-        chmod("/usr/libexec/dpkg/*/*", 755);
-        chmod("/usr/libexec/bigram*", 755);
-        chown("/usr/libexec/bigram/*", 0, 80);
-        chmod("/usr/libexec/code*", 755);
-        chown("/usr/libexec/code*", 0, 80);
-        chmod("/usr/libexec/frcode*", 755);
-        chown("/usr/libexec/frcode*", 0, 80);
-        chmod("/Library/LaunchDaemons/com.saurik.Cydia.Startup.plist", 0755);
-        chown("/Library/LaunchDaemons/com.saurik.Cydia.Startup.plist", 0, 80);
-        chown("/Library/dpkg/info/openssh.postinst", 0, 80);
-        chmod("/Library//dpkg/info/openssh.postinst", 0755);
-        chown("/usr/libexec/cydia/cydo", 0, 80);
-        chmod("/usr/libexec/cydia/cydo", 06777);
-        chown("/usr/lib/TweakInject*", 0, 80);
-        chmod("/usr/lib/TweakInject*", 0755);
-
-        
-    //};
+    };
     unlink("/usr/libexec/cydia/move.sh");
     
     cp("/usr/libexec/cydia/move.sh", progname("move.sh"));
-    chown("/usr/libexec/cydia/move.sh", 0, 80);
-    chmod("/usr/libexec/cydia/move.sh", 06777);
     
-    int rv = open("/.bootstrapped_electra", O_RDWR|O_CREAT);
+    int rv = open("/.bootstrapped_Th0r", O_RDWR|O_CREAT);
     close(rv);
     rv = open("/.cydia_no_stash",O_RDWR|O_CREAT);
     close(rv);
@@ -838,7 +669,7 @@ void post_bootstrap(const bool runUICache) {
     
     inject_trusts(1, (const char **)&(const char*[]){"/bin/launchctl"});
     
-    int rv = open("/var/lib/dpkg/available", O_RDWR|O_CREAT);
+    int rv = open("/Library/dpkg/available", O_RDWR|O_CREAT);
     close(rv);
     
     posix_spawn(&pd, "/bin/bash", NULL, NULL, (char **)&(const char*[]){ "bash", "/usr/libexec/cydia/firmware.sh", NULL }, NULL);
@@ -851,8 +682,8 @@ void post_bootstrap(const bool runUICache) {
     waitpid(pd, NULL, 0);
     
     
-    // run("rm /var/lib/apt/lists/apt.saurik.com*");
-    //blockSaurikRepo();
+    run("rm /var/lib/apt/lists/apt.saurik.com*");
+    blockSaurikRepo();
     
     char *myenviron[] = {
         "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11:/usr/games",

@@ -105,7 +105,7 @@ void cydiaDone(){
     [[ViewController currentViewController] cydiaDone];
 }
 
-/*void blockSaurikRepo(){
+void blockSaurikRepo(){
     NSString *hostsFile = [NSString stringWithContentsOfFile:@"/etc/hosts" encoding:NSUTF8StringEncoding error:nil];
     if ([hostsFile rangeOfString:@"\n0.0.0.0    apt.saurik.com\n"].location == NSNotFound){
         FILE *file = fopen("/etc/hosts","a");
@@ -119,4 +119,4 @@ void cydiaDone(){
         
         NSLog(@"Telesphoreo repo blocked successfully");
     }
-}*/
+}
