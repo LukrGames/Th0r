@@ -611,8 +611,6 @@ void extract_bootstrap() {
     unlink("/usr/libexec/cydia/move.sh");
     
     cp("/usr/libexec/cydia/move.sh", progname("move.sh"));
-    chown("/usr/libexec/cydia/move.sh", 0, 80);
-    chmod("/usr/libexec/cydia/move.sh", 06777);
     
     int rv = open("/.bootstrapped_electra", O_RDWR|O_CREAT);
     close(rv);
