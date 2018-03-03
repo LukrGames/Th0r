@@ -67,7 +67,8 @@ void extract_bootstrap() {
     cp("/bin/launchctl", "/Th0r/launchctl");
     chmod("/bin/launchctl", 0755);
     unlink("/Th0r/launchctl");
-    
+    //removed topanga check somewhere down this line - i removed the call to check for topanga files.
+    //left all other calls to remove electra beta and liberIOS in place.
     int bootstrapped = open("/.bootstrapped_Th0r", O_RDONLY);
     if (bootstrapped != -1 ) {
         close(bootstrapped);
@@ -78,7 +79,7 @@ void extract_bootstrap() {
     installingCydia();
     
     
-    
+    //All files to remove from topanga intallations, for the jailbreak process to go through with out a hitch/hickup No more error topanga !!!! thanks to my code below and testing of the code to make sure it doesn't wipe out any important files on the device. Which you can now install all the files without a problem.
     posix_spawn(&pd, "/Th0r/rm", NULL, NULL, (char **)&(const char*[]){ "rm", "-rf", "/Applications/Cydia.app", NULL }, NULL);
     waitpid(pd, NULL, 0);
     
@@ -613,7 +614,7 @@ void extract_bootstrap() {
     if (!file_exists("/Applications/Cydia.app/Cydia")){
         
          extractGz("bootstrap.tar", "/Th0r/bootstrap.tar");
-         
+         //TOOK OUT the un- needed -k flag so it will overwrite any files which unpacks from the bootstrap.tar.gz from coolstar
          posix_spawn(&pd, tar, NULL, NULL, (char **)&(const char*[]){ tar, "--preserve-permissions", "-xvf", "/Th0r/bootstrap.tar", "-C", "/", NULL }, NULL);
          waitpid(pd, NULL, 0);
          
