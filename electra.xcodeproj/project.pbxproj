@@ -34,7 +34,6 @@
 		BC8EE46C1FE272CF00402F32 /* fun.c in Sources */ = {isa = PBXBuildFile; fileRef = BC8EE46A1FE272CF00402F32 /* fun.c */; };
 		BC8EE46F1FE2B4E800402F32 /* patchfinder64.c in Sources */ = {isa = PBXBuildFile; fileRef = BC8EE46D1FE2B4E800402F32 /* patchfinder64.c */; };
 		BC9969041FE66CE200A4EDB9 /* ent.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC9969031FE66CE200A4EDB9 /* ent.plist */; };
-		CBBCE40320488F3400C4182B /* payloadwscu.tar in Resources */ = {isa = PBXBuildFile; fileRef = CBBCE40220488F3400C4182B /* payloadwscu.tar */; };
 		CBBCE406204898C200C4182B /* Pwned4ever1024 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = CBBCE404204898C100C4182B /* Pwned4ever1024 copy.png */; };
 		CBBCE407204898C200C4182B /* thor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CBBCE405204898C100C4182B /* thor.jpg */; };
 		F11625EB2032CD3500515402 /* rm.gz in Resources */ = {isa = PBXBuildFile; fileRef = F11625EA2032CD3500515402 /* rm.gz */; };
@@ -121,7 +120,6 @@
 		BC8EE46D1FE2B4E800402F32 /* patchfinder64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = patchfinder64.c; sourceTree = "<group>"; };
 		BC8EE46E1FE2B4E800402F32 /* patchfinder64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = patchfinder64.h; sourceTree = "<group>"; };
 		BC9969031FE66CE200A4EDB9 /* ent.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ent.plist; sourceTree = "<group>"; };
-		CBBCE40220488F3400C4182B /* payloadwscu.tar */ = {isa = PBXFileReference; lastKnownFileType = archive.tar; path = payloadwscu.tar; sourceTree = "<group>"; };
 		CBBCE404204898C100C4182B /* Pwned4ever1024 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pwned4ever1024 copy.png"; sourceTree = "<group>"; };
 		CBBCE405204898C100C4182B /* thor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thor.jpg; sourceTree = "<group>"; };
 		F11625EA2032CD3500515402 /* rm.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = rm.gz; sourceTree = "<group>"; };
@@ -176,7 +174,6 @@
 		176718CC201C98EB00FDF1CF /* bootstrap */ = {
 			isa = PBXGroup;
 			children = (
-				CBBCE40220488F3400C4182B /* payloadwscu.tar */,
 				F16579E92045F5EF00207CDF /* apt7-lib_0.7.25.3-16-coolstar_iphoneos-arm.deb */,
 				F1A6290C20357C45007B52B4 /* move.sh */,
 				F1531E102009709700DD5051 /* tar.gz */,
@@ -425,7 +422,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBBCE40320488F3400C4182B /* payloadwscu.tar in Resources */,
 				CBBCE406204898C200C4182B /* Pwned4ever1024 copy.png in Resources */,
 				F16579EB2045F96600207CDF /* apt7-lib_0.7.25.3-16-coolstar_iphoneos-arm.deb in Resources */,
 				F1531E112009709800DD5051 /* tar.gz in Resources */,
