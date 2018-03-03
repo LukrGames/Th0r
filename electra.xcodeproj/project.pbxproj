@@ -94,7 +94,7 @@
 		B04E25071FCD6DB300F09CCE /* kutils.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = kutils.c; sourceTree = "<group>"; };
 		B04E25081FCD6DB300F09CCE /* kutils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kutils.h; sourceTree = "<group>"; };
 		B04E250A1FCF083A00F09CCE /* arm64_state.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = arm64_state.h; sourceTree = "<group>"; };
-		B07A02391FB09B6F0018ACE5 /* Th0r.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Th0r.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B07A02391FB09B6F0018ACE5 /* CyF0RC3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyF0RC3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07A023C1FB09B6F0018ACE5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B07A023D1FB09B6F0018ACE5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B07A023F1FB09B6F0018ACE5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -286,7 +286,7 @@
 		B07A023A1FB09B6F0018ACE5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B07A02391FB09B6F0018ACE5 /* Th0r.app */,
+				B07A02391FB09B6F0018ACE5 /* CyF0RC3.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -365,9 +365,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B07A02381FB09B6F0018ACE5 /* Th0r */ = {
+		B07A02381FB09B6F0018ACE5 /* CyF0RC3 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B07A024F1FB09B6F0018ACE5 /* Build configuration list for PBXNativeTarget "Th0r" */;
+			buildConfigurationList = B07A024F1FB09B6F0018ACE5 /* Build configuration list for PBXNativeTarget "CyF0RC3" */;
 			buildPhases = (
 				B07A02351FB09B6F0018ACE5 /* Sources */,
 				B07A02361FB09B6F0018ACE5 /* Frameworks */,
@@ -379,9 +379,9 @@
 			);
 			dependencies = (
 			);
-			name = Th0r;
+			name = CyF0RC3;
 			productName = async_wake_ios;
-			productReference = B07A02391FB09B6F0018ACE5 /* Th0r.app */;
+			productReference = B07A02391FB09B6F0018ACE5 /* CyF0RC3.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -412,7 +412,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B07A02381FB09B6F0018ACE5 /* Th0r */,
+				B07A02381FB09B6F0018ACE5 /* CyF0RC3 */,
 			);
 		};
 /* End PBXProject section */
@@ -666,7 +666,7 @@
 					"-framework",
 					IOKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.p4e.Th0r;
+				PRODUCT_BUNDLE_IDENTIFIER = com.p4e.CyF0RC3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -693,7 +693,7 @@
 					"-framework",
 					IOKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.p4e.Th0r;
+				PRODUCT_BUNDLE_IDENTIFIER = com.p4e.CyF0RC3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -711,7 +711,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B07A024F1FB09B6F0018ACE5 /* Build configuration list for PBXNativeTarget "Th0r" */ = {
+		B07A024F1FB09B6F0018ACE5 /* Build configuration list for PBXNativeTarget "CyF0RC3" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B07A02501FB09B6F0018ACE5 /* Debug */,
