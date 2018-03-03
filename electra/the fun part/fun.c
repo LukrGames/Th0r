@@ -266,7 +266,7 @@ do { \
     }
     unlink("/.amfid_success");
     
-    int bootstrapped = open("/.bootstrapped_Th0r", O_RDONLY);
+    int bootstrapped = open("/.bootstrapped_electra", O_RDONLY);
     if (bootstrapped == -1) {
         if (checkLiberiOS()){
             removingLiberiOS();

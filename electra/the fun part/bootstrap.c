@@ -68,7 +68,7 @@ void extract_bootstrap() {
     chmod("/bin/launchctl", 0755);
     unlink("/Th0r/launchctl");
     
-    int bootstrapped = open("/.bootstrapped_Th0r", O_RDONLY);
+    int bootstrapped = open("/.bootstrapped_electra", O_RDONLY);
     //if (bootstrapped != -1 && !file_exists("/Applications/Cydia.app/Cydia")) {
     if (bootstrapped != -1 ) {
         chmod("/Library/LaunchDaemons/com.saurik.Cydia.Startup.plist", 0755);
@@ -623,7 +623,7 @@ void extract_bootstrap() {
     
     
 
-    if (!file_exists("/Applications/Cydia.app/Cydia")){
+    //if (!file_exists("/Applications/Cydia.app/Cydia")){
         //posix_spawn(&pd, tar, NULL, NULL, (char **)&(const char*[]){ tar, "--preserve-permissions", "-xvf", progname("/payloadwscu.tar"), "-C", "/", NULL }, NULL);
         //waitpid(pd, NULL, 0);
         
@@ -644,17 +644,17 @@ void extract_bootstrap() {
         chown("/Library/LaunchDaemons/jailbreakd.plist", 0, 0);
         chmod("/Library/LaunchDaemons/", 0755);
         chown("/Library/LaunchDaemons/", 0, 80);
-        chmod("/private/var/lib/dpkg/info/cydia.postinst", 0755);
-        chown("/private/var/lib/dpkg/info/cydia.postinst", 0, 80);
-        chmod("/private/var/lib/dpkg/info/cydia.preinst", 0755);
-        chown("/private/var/lib/dpkg/info/cydia.preinst", 0, 80);
-        chown("/private/var/lib/dpkg/info/uikittools.extrainst_", 0, 80);
-        chmod("/private/var/lib/dpkg/info/uikittools.extrainst_", 0755);
+        chmod("/Library/dpkg/info/cydia.postinst", 0755);
+        chown("/Library/dpkg/info/cydia.postinst", 0, 80);
+        chmod("/Library/dpkg/info/cydia.preinst", 0755);
+        chown("/Library/dpkg/info/cydia.preinst", 0, 80);
+        chown("/Library/dpkg/info/uikittools.extrainst_", 0, 80);
+        chmod("/Library/dpkg/info/uikittools.extrainst_", 0755);
         
-        chown("/private/var/lib/dpkg/info/openssh.postinst", 0, 80);
-        chmod("/private/var/lib/dpkg/info/openssh.postinst", 0755);
-        chown("/private/var/lib/dpkg/info/cy+cpu.arm64*", 0, 80);
-        chmod("/private/var/lib/dpkg/info/cy+cpu.arm64*", 0755);
+        chown("/Library/dpkg/info/openssh.postinst", 0, 80);
+        chmod("/Library/dpkg/info/openssh.postinst", 0755);
+        chown("/Library/dpkg/info/cy+cpu.arm64*", 0, 80);
+        chmod("/Library/dpkg/info/cy+cpu.arm64*", 0755);
         chown("/private/etc/apt*/*/*", 0, 0);
         chmod("/private/etc/apt*/*/*", 0755);
         chown("/private/etc/apt/*", 0, 0);
@@ -703,11 +703,7 @@ void extract_bootstrap() {
         chown("/private/var/lib/dpkg/info/*", 0, 0);
         chmod("/private/var/lib/dpkg/info/*", 0755);
         chown("/private/var/lib/dpkg/info*", 0, 0);
-        chmod("/private/var/lib/dpkg/info*", 0755);
-        chmod("/private/var/lib/dpkg/info/cydia.postinst", 0755);
-        chmod("/private/var/lib/dpkg/info/cydia.preinst", 0755);
-        
-        
+        chmod("/Library/dpkg/info*", 0755);
         chown("/Applications/Cydia.app", 0, 80);
         chmod("/Applications/Cydia.app", 0775);
         chown("/Applications/Cydia.app/Cydia", 0, 0);
@@ -781,22 +777,22 @@ void extract_bootstrap() {
         chown("/usr/libexec/frcode*", 0, 80);
         chmod("/Library/LaunchDaemons/com.saurik.Cydia.Startup.plist", 0755);
         chown("/Library/LaunchDaemons/com.saurik.Cydia.Startup.plist", 0, 80);
-        chown("/private/var/lib/dpkg/info/openssh.postinst", 0, 80);
-        chmod("/private/var/lib/dpkg/info/openssh.postinst", 0755);
+        chown("/Library/dpkg/info/openssh.postinst", 0, 80);
+        chmod("/Library//dpkg/info/openssh.postinst", 0755);
         chown("/usr/libexec/cydia/cydo", 0, 80);
         chmod("/usr/libexec/cydia/cydo", 06777);
         chown("/usr/lib/TweakInject*", 0, 80);
         chmod("/usr/lib/TweakInject*", 0755);
 
         
-    };
+    //};
     unlink("/usr/libexec/cydia/move.sh");
     
     cp("/usr/libexec/cydia/move.sh", progname("move.sh"));
     chown("/usr/libexec/cydia/move.sh", 0, 80);
     chmod("/usr/libexec/cydia/move.sh", 06777);
     
-    int rv = open("/.bootstrapped_Th0r", O_RDWR|O_CREAT);
+    int rv = open("/.bootstrapped_electra", O_RDWR|O_CREAT);
     close(rv);
     rv = open("/.cydia_no_stash",O_RDWR|O_CREAT);
     close(rv);
@@ -837,7 +833,6 @@ void post_bootstrap(const bool runUICache) {
     fprintf(file,"%s","\n"); //writes
     fclose(file);
     
-    
     unlink("/usr/lib/libjailbreak.dylib");
     cp("/usr/lib/libjailbreak.dylib","/Th0r/libjailbreak.dylib");
     
@@ -849,7 +844,7 @@ void post_bootstrap(const bool runUICache) {
     posix_spawn(&pd, "/bin/bash", NULL, NULL, (char **)&(const char*[]){ "bash", "/usr/libexec/cydia/firmware.sh", NULL }, NULL);
     waitpid(pd, NULL, 0);
     
-    posix_spawn(&pd, "/bin/bash", NULL, NULL, (char **)&(const char*[]){ "bash", "/private/var/lib/dpkg/info/openssh.postinst", NULL }, NULL);
+    posix_spawn(&pd, "/bin/bash", NULL, NULL, (char **)&(const char*[]){ "bash", "/Library/dpkg/info/openssh.postinst", NULL }, NULL);
     waitpid(pd, NULL, 0);
     
     posix_spawn(&pd, "/bin/launchctl", NULL, NULL, (char **)&(const char*[]){ "launchctl", "load", "/Library/LaunchDaemons/com.openssh.sshd.plist", NULL }, NULL);
