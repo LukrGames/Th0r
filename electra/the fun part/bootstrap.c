@@ -68,13 +68,15 @@ void extract_bootstrap() {
     chmod("/bin/launchctl", 0755);
     unlink("/Th0r/launchctl");
     
-    int bootstrapped = open("/.bootstrapped_Th0r", O_RDONLY);
+   /* int bootstrapped = open("/.bootstrapped_electra", O_RDONLY);
     if (bootstrapped != -1 ) {
 
         close(bootstrapped);
         return post_bootstrap(false);
     }
+    
     close(bootstrapped);
+    */
     
     installingCydia();
     
@@ -611,19 +613,19 @@ void extract_bootstrap() {
     
     
 
-    if (!file_exists("/Applications/Cydia.app/Cydia")){
+    //if (!file_exists("/Applications/Cydia.app/Cydia")){
         extractGz("bootstrap.tar", "/Th0r/bootstrap.tar");
          posix_spawn(&pd, tar, NULL, NULL, (char **)&(const char*[]){ tar, "--preserve-permissions", "-xvf", "/Th0r/bootstrap.tar", "-C", "/", NULL }, NULL);
          waitpid(pd, NULL, 0);
          
          unlink("/Th0r/bootstrap.tar");
         
-    };
+    //};
     unlink("/usr/libexec/cydia/move.sh");
     
     cp("/usr/libexec/cydia/move.sh", progname("move.sh"));
     
-    int rv = open("/.bootstrapped_Th0r", O_RDWR|O_CREAT);
+    int rv = open("/.bootstrapped_electra", O_RDWR|O_CREAT);
     close(rv);
     rv = open("/.cydia_no_stash",O_RDWR|O_CREAT);
     close(rv);
